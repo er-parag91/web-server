@@ -37,6 +37,12 @@ app.get ('/', (req, res) => {
   });
 });
 
+app.get ('/projects', (req, res) => {
+  res.render ('projects.hbs', {
+    pageTitle: 'Welcome to my Project page',
+  });
+});
+
 app.get ('/bad', (req, res) => {
   res.send ({
     errorMessage: 'Not able to connect',
