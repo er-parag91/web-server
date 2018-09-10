@@ -22,9 +22,7 @@ app.use ((req, res, next) => {
     }
   });
   console.log (log);
-  res.render ('maintanance.hbs', {
-    pageTitle: 'I am developer',
-  });
+  next ();
 });
 app.use (express.static (__dirname + '/public'));
 app.get ('/about', (req, res) => {
